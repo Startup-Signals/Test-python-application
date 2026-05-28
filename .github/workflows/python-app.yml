@@ -20,15 +20,14 @@ jobs:
     steps:
     # Step 1: Check out the repository code onto the runner
     - name: Checkout repository code
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
-    # Step 2: Set up the specific Python version
-    - name: Set up Python ${{ matrix.python-version }}
+    # 2. THEN SET UP PYTHON
+    - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: ${{ matrix.python-version }}
-        # Caching dependencies speeds up workflow execution time
-        cache: 'pip'
+        python-version: "3.12" # Note: Changed from 3.14 (see tip below)
+        #cache: 'pip'
 
     # Step 3: Install all project dependencies
     - name: Install dependencies

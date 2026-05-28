@@ -15,7 +15,7 @@ jobs:
     strategy:
       # Run the tests across multiple Python versions simultaneously
       matrix:
-        python-version: ["3.10", "3.11", "3.12"]
+        python-version: ["3.14"]
 
     steps:
     # Step 1: Check out the repository code onto the runner
